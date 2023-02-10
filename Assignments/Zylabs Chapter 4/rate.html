@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  label{
+    	display: inline-block;
+      width: 120px;
+      }
+      input,textarea {
+        width: 300px;
+        padding: 10px;
+        margin-bottom:5px;
+        		}
+
+      input[type="submit"]{
+        width: auto;  }
+
+        	.required::after{
+            content:"*";
+            	color: red;
+              	}
+
+      	#note::before{
+          content:"*";
+          color: red;
+          }
+
+        label+input{
+          background-color: rgb(219,241,248);
+          	}
+          </style>
+
+        </head>
+
+        <body>
+          <h1>Rate a Product</h1>
+          <p id="note">Indicates required field.</p>
+
+          <form>
+            <label for="product" class="required">Product</label>
+            <input type="text" id="Product"><br>
+            <label for="pdate" class="required">Purchase Date</label>
+            <input type="text" id="pdate" placeholder="mm/dd/yyyy"><br>
+            <label for="rate" class="required">Rating</label>
+            <input type="text" id="rate"><br>
+            <label for="comment">Comments</label>
+            <textarea id="comment"></textarea><br>
+            	<input type="submit" value="Submit Rating">
+            </form>
+          </body>
+
+        </html>
