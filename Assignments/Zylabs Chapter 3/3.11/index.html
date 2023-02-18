@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Happy Birthday Message Creator</h1>
+    <form>
+        <label for="message">Message?</label>
+        <input type="text" placeholder="Happy Birthday!" name="message" id="message"><br><br>
+
+        <label for="email">Eamil address?</label>
+        <input type="email" pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" placeholder="name@domain.com" name="email" id="email"><br>
+
+        <label for="date">Date to send?</label>
+        <input type="date" name="dateToSend" id="dateToSend"><br><br>
+
+        <label for="color">Message color?</label>
+        <input type="color" name="messageColor" id="messageColor"><br><br>
+
+        <label for="blinks">Number of blinks?</label>
+        <input type="number" min="0" max="10" value="0" placeholder="0" name="numBlinks" id="numBlinks"><br><br>
+
+        <label for="volume">Music volume?</label>
+        <input type="range" value="20" min="0" max="50" name="musicVolume" id="musicVolume"><br><br>
+
+        <button type="submit" name="submit">Send Birthday Message</button>
+    </form>
+
+</body>
+
+</html>
