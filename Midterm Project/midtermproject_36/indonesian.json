@@ -1,0 +1,38 @@
+[
+    {
+        "productName": "Bakso",
+        "productDesc": "Bakso is savory meatball and noodle soup. Also has hard boiled eggs and other potential add-ins like tofu or bok choy.",
+        "priceList": "Price: $10.00",
+        "url": "./images/bakso.jpeg"
+    },
+    {
+        "productName": "Mi Goreng",
+        "productDesc": "Mi goreng is a stir-fried noodle dish with a thick and flavorful sauce. You can pick your choice of chicken, beef, shrimp, or all three.",
+        "priceList": "Price: $10.00",
+        "url": "./images/mi_goreng.jpeg"
+    },
+    {
+        "productName": "Nasi Goreng",
+        "productDesc": "Nasi goreng is Indonesia's version of fried rice. Packs more flavor you can pick your choice of chicken, beef, shrimp, or all three. Topped with a fried egg.",
+        "priceList": "Price: $10.00",
+        "url": "./images/nasi_goreng.jpeg"
+    },
+    {
+        "productName": "Satay ayam",
+        "productDesc": "Satay ayam is a chicken skewer marinated in sweet soy sauce and grilled over a flame. Served with a spicy peanut sauce.",
+        "priceList": "Price: $10.00",
+        "url": "./images/satay.jpeg"
+    },
+    {
+        "productName": "Soto",
+        "productDesc": "Soto is an Indonesian chicken soup with a nice herbal broth and rice noodles, chicken, hard boiled eggs, and other various toppings.",
+        "priceList": "Price: $8.00",
+        "url": "./images/soto.jpeg"
+    },
+    {
+        "productName": "Martabak Telur",
+        "productDesc": "Martabak telur is a savory roti-like fried pancake stuffed with a beef and egg filling. Very popular on the streets of Indonesia.",
+        "priceList": "Price: $8.00",
+        "url": "./images/martabak.webp"
+    } 
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "productName": "Chichen Kebab",
+        "productDesc": "Chicken kebabs are cubes of chicken marinated in a blend of herbs and spices, skewered, then grilled.",
+        "priceList": "Price: $10.00",
+        "url": "./images/kebab.jpeg"
+    },
+    {
+        "productName": "Falafel",
+        "productDesc": "Falafel is a deep fried ball of chickpeas and other herbs and spices.",
+        "priceList": "Price: $10.00",
+        "url": "./images/falafel.jpeg"
+    },
+    {
+        "productName": "Shakshuka",
+        "productDesc": "Shakshuka is a dish with poached eggs in a tomato based sauce. Served with pita bread.",
+        "priceList": "Price: $10.00",
+        "url": "./images/shakshuka.jpeg"
+    },
+    {
+        "productName": "Pilaf",
+        "productDesc": "Pilaf is a rice dish where the rice is cooked in a stock or a broth along with other aromatics.",
+        "priceList": "Price: $8.00",
+        "url": "./images/pilaf.jpeg"
+    },
+    {
+        "productName": "Baklava",
+        "productDesc": "Baklava is a pastry made with filo dough filled with nuts and held together with honey.",
+        "priceList": "Price: $8.00",
+        "url": "./images/baklava.jpeg"
+    },
+    {
+        "productName": "Hummus With Vegetable",
+        "productDesc": "Hummus is a chickpea paste along with other flavorings, served with vegetables to dip it in.",
+        "priceList": "Price: $8.00",
+        "url": "./images/hummus.jpeg"
+    } 
+]
