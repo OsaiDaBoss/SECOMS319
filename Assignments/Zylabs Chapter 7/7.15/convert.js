@@ -1,86 +1,97 @@
-var cInputValue = document.getElementById('cinput');
-var fInputValue = document.getElementById('finput');
-var errorMSG = document.getElementById('errorMessage');
-var image = document.getElementById('weatherimage');
-
-window.addEventListener("DOMContentLoaded",domLoaded);
-
-function domLoaded()
-{
-  document.getElementById("convertButton").addEventListener("click", checkInput);
-  document.getElementById("cinput").addEventListener("input", clearFInput);
-  document.getElementById("finput").addEventListener("input", clearCInput);
+window.addEventListener('DOMContentLoaded', domLoaded);
+function convertCtoF(degreesCelsius) {
+    var CtoF = degreesCelsius * 9 / 5 + 32;
+    return CtoF;
 }
 
-function convertCtoF(degreesCelsius)
-{
-  return(degreesCelsius*9/5 + 32);
+function convertFtoC(degreesFahrenheit) {
+    var FtoC = (degreesFahrenheit - 32) * 5 / 9;
+    return FtoC;
 }
 
-function convertFtoC(degreesFahrenheit)
-{
-  return((degreesFahrenheit - 32)* 5/9);
+function domLoaded() {
+    var convertBtn = document.getElementById("convertButton");
+    var errMsg = document.getElementById("errorMessage");
+    var celsiusIn = document.getElementById("cInput");
+    var fahrenheitIn = document.getElementById("fInput");
+    var img = document.getElementById("weatherImage")
+    convertBtn.addEventListener("click", function () {
+        var celsius = parseFloat(celsiusIn.value);
+        var fahrenheit = parseFloat(fahrenheitIn.value);
+
+        if (isNaN(celsius)) celsius = 0;
+        if (isNaN(fahrenheit)) fahrenheit = 0;
+        errMsg.innerHTML = "";
+        if (fahrenheit < 32) {
+            img.setAttribute("src", "cold.png");
+        }
+        else if (fahrenheit >= 32 && fahrenheit <= 50) {
+            img.setAttribute("src", "cool.png");
+        }
+
+        else if (fahrenheit > 50) {
+            img.setAttribute("src", "warm.png");
+        }
+
+        else {
+            console.log("non");
+        }
+
+        if (celsius != 0) { 
+            console.log("here")
+            if (Math.sign(celsius) == 1 || Math.sign(celsius) == -1) {
+                
+                ans = convertCtoF(celsius);
+                if (ans < 32) {
+                    img.setAttribute("src", "cold.png");
+                }
+
+                else if (ans >= 32 && ans <= 50) {
+                    img.setAttribute("src", "cool.png");
+                }
+                else if (ans > 50) {
+                    img.setAttribute("src", "warm.png");
+                }
+
+                else {
+                    console.log("non");
+                }
+                fahrenheitIn.value = ans;
+            }
+
+            else {
+                img.setAttribute("src", "");
+                errMsg.innerHTML = `${cInput.value} is not a number`;
+            }
+        }
+
+        else if (fahrenheit != 0)
+        {
+            if (Math.sign(fahrenheit) == 1 || Math.sign(fahrenheit) == -1)
+            {
+                ans = convertFtoC(fahrenheit);
+                celsiusIn.value = ans;
+            }
+
+            else { 
+                img.setAttribute("src", "");
+                errMsg.innerHTML =`${fInput.value} is not a number`;
+            }
+         }
+        else if(isNaN(fInput.value)) { 
+            errMsg.innerHTML = `${fInput.value} is not a number`;
+        }
+        else if(isNaN(cInput.value)) { 
+            errMsg.innerHTML = `${cInput.value} is not a number`;
+        }
+    });
+
+    celsiusIn.addEventListener('input', function () {
+        fahrenheitIn.value = "";
+    });
+
+    fahrenheitIn.addEventListener('input', function () {
+        celsiusIn.value = "";
+    });
+
 }
-
-function checkInput()
-{
-   if(cInputValue.value != "")
-  {
-    var celsiusInputValue = parseFloat(cInputValue.value);
-      if(isNaN(celsiusInputValue))
-      {
-        errorMessage.innerHTML = cInputValue.value + " is not a number !";
-        image.src =" "
-      }
-      else
-      {
-        var fahrenheit_value = convertCtoF(celsiusInputValue);
-        fInputValue.value = fahrenheit_value;
-        changeImage(fahrenheit_value);
-        errorMessage.innerHTML = "";
-      }
-  }
-  else
-  {
-      var fahrenheitInputValue = parseFloat(fInputValue.value);
-      if(isNaN(fahrenheitInputValue))
-      {
-        errorMessage.innerHTML=fInputValue.value + " is not a number !";
-        image.src =" "
-      }
-      else
-      {
-        cInputValue.value = convertFtoC(fahrenheitInputValue);
-        changeImage(parseFloat(fInputValue.value)); 
-        errorMessage.innerHTML="";
-      }
-  }
-}
-
-function clearFInput()
-{
-  fInputValue.value="";
-}
-
-function clearCInput()
-{
-  cInputValue.value="";
-}
-
-function changeImage(tempValue)
-{
-
-  if(tempValue < 32)
-  {
-    image.src = "cold.png";
-  }
-  else if(tempValue >= 32 && tempValue <=50)
-  {
-    image.src = "cool.png";
-  }
-  else
-  {
-    image.src ="warm.png";
-  }
-}
-
